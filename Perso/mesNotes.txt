@@ -1,0 +1,50 @@
+﻿ECMAScript => voir site web pour compatibilité
+
+en bas a gauche, roue, thmes d'icone de fichier, material icone themes
+
+debugger; //sert ds le fichier ts pour debugger (point d'arret)
+
+http://augury.angular.io (Extension chrome) a voir dans le panel de dev (F12)
+
+
+Extensions Visual Studio Code :
+- Angular essentiel
+- Bootstrap v4 Snippets
+
+Utilisation  de snippets bootstrap
+dans le fichier html commencer a taper b-, par exemple b-jumbotron pour generer le code qui va bien directement.
+
+li.list-group-item*12>lorem2 : ajoute 12 li avec du texte généré
+
+sous VS Code, formater un fichier json ALT+MAJ+F
+
+MarkDown Mermaid sous VS code pour faire des graph en MD
+
+Generer doc : compodoc => npm i @compodoc/compodoc
+- dans package.json, ajouter dans scripts => "doc:app":"compodoc -p ./tsconfig.app.json -s -w"
+- Pour lancer compodoc : npm run doc:app
+
+
+https://placehold.it/hauteurxlargeur (creation image de remplacement)
+
+
+
+<app-shared-button feedback [mode]=" 'valid' ">Text 1<span>😋</span></app-shared-button> <!-- Text1 et l'image seront dans les ng-content recepteurs -->
+<app-shared-button big raised  [mode]=" 'option' ">Text 2</app-shared-button><!-- big et raised sont des classes CSS -->
+<app-shared-button small  [mode]=" 'cancel' ">Text 3</app-shared-button>
+
+<br /><br />
+
+<!-- cardAction  => Réponse de  du composant enfant (par ex savoir si un bouton est cliqué -->
+<app-shared-card
+  (cardAction)="cardActionHandler($event)"
+  [url]=" 'https://placehold.it/250x150' "
+  [button]=" 'I\'m Famous button' ">
+  <span class="title">My Title</span>
+  <span class="description">Esse ipsas mihi sicut ipsas ipsas ego vultis petenda semper censuerim semper petenda debeo ego quis rei vultis debeo omnium.</span>
+</app-shared-card>
+
+
+::ng-deep : Hack CSS pou forcer une classe
+
+https://devdocs.io/ Toutes les docs offielles au meme endroit

@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand">Search</a>
+    <form class="form-inline" method="get" action="">
+
+      <app-shared-button small mode="cancel"
+      *ngIf="userInput"
+      (click)=" userInput = ''"
+      >X</app-shared-button>
+
+      <!-- [(ngModel)] Binding bi directionnel -->
+      <input   class="form-control"
+              [(ngModel)]="userInput"
+              name="keyword"
+              pattern="[a-z]{3,10}"
+              #searchField="ngModel"
+              placeholder="chuck was here"
+              required>
+
+      <app-shared-button [ngStyle]="{opacity:.5}" *ngIf="searchField.invalid">GO</app-shared-button>
+      <app-shared-button (click)="searchHandler()" *ngIf="searchField.valid">GO</app-shared-button>
+    </form>
+  </nav>

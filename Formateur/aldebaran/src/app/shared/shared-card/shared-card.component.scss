@@ -1,0 +1,35 @@
+:host{
+  display: inline-block;
+  width: 270px;
+  border:1px solid grey;
+  border-radius: 3px;
+  padding:10px;
+  margin:5px;
+  font-size:11px;
+  transition:box-shadow .3s ease;
+  min-height: 325px;
+}
+:host:hover{
+  box-shadow: 2px 2px 5px black;
+}
+h1{
+  text-transform: uppercase;
+  font-size:1.5em;
+  margin: 5px 0 5px 0;
+}
+div{
+  text-align:center;
+}
+#image{
+  width:250px;
+  height:150px;
+  overflow: hidden;
+}
+
+#image>img{
+  transition: transform 1.6s ease-in-out;
+}
+
+#image>img:hover{
+  transform:scale(2);
+}

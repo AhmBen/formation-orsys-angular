@@ -1,0 +1,9 @@
+<app-shared-card
+  *ngIf="content"
+  [url]="content.url"
+>
+  <span class="title">{{ content.title }}</span>
+  <span class="description">{{content.description}}</span>
+</app-shared-card>
+
+<app-detail-comment *ngIf="content"></app-detail-comment>

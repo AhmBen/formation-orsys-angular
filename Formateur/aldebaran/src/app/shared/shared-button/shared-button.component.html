@@ -1,0 +1,9 @@
+<div class="btn" [ngClass]="{
+  'btn-primary': mode == 'valid',
+  'btn-secondary': mode == 'option',
+  'btn-danger': mode == 'cancel'
+}">
+  <ng-content select="span"></ng-content>
+  <ng-content></ng-content>
+</div>
+

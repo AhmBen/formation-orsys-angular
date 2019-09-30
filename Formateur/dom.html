@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <my-element color="red"></my-element>
+    <my-element></my-element>
+    <my-element  color="blue"></my-element>
+    <script>
+        class MyElement extends HTMLElement{
+            constructor(){
+                super();
+            }
+            connectedCallback (){
+                // alert('Hello')
+                this.style.color = this.attributes['color'].value || 'black';
+                this.innerHTML = '<h1>I am a Custom Element</h1>'
+            }
+
+        }
+        customElements.define('my-element',MyElement)
+    </script>
+</body>
+</html>

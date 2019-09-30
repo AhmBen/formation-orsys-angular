@@ -1,0 +1,21 @@
+:host {
+  padding:5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+:host[big] {
+  transform: scale(1.2);
+}
+
+:host[small] {
+  transform: scale(0.8);
+}
+
+:host[raised]>div {
+  box-shadow: 2px 2px 2px darkslategray;
+}
+
+:host[feedback]>div:hover {
+  background-color: grey;
+}

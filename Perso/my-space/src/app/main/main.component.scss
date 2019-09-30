@@ -1,0 +1,12 @@
+
+:host { /* Composant lui meme ex ici app-main */
+  display: block;
+  overflow: hidden;
+  height: 350px;
+  overflow-y: auto;
+}
+
+a.btn {
+  color:white;
+  margin:3px;
+}

@@ -1,0 +1,24 @@
+<a class="btn btn-danger"
+   *ngIf="filter != '' "
+   appZoom
+   (click)=" filter = '' ">Reset</a>
+
+<a  class="btn"
+    *ngFor="let character of letters"
+    [ngClass]=" {
+      'btn-secondary':filter != character,
+      'btn-primary':filter == character
+    }"
+    (click)="filter = character">{{character }}</a>
+
+<hr>
+
+<ul class="list-group">
+
+  <li class="list-group-item"
+      appZoom
+      *ngFor="let user of collection">
+      {{ user.name | civility:'es'}}
+  </li>
+
+</ul>

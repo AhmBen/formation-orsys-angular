@@ -1,0 +1,6 @@
+<app-shared-card *ngFor="let image of content"
+  [url]="image.url"
+  [button]=" 'Click to comment' ">
+  <span class="title">{{image.title}}</span>
+  <span class="description">{{image.description.substring(0,100)}}</span>
+</app-shared-card>

@@ -1,0 +1,22 @@
+:host{
+  display: flex;
+  justify-content: center;
+  width:100vw;
+  height: 55vh;
+  overflow: hidden;
+  padding:10px;
+  flex-flow: row wrap;
+  align-items: flex-start
+}
+app-shared-card{
+  width:60%;
+}
+
+::ng-deep app-shared-card div{
+  width:calc(100%)!important;
+}
+
+app-detail-comment{
+  width:30%;
+  padding:5px;
+}
